@@ -14,7 +14,7 @@ const translations = {
   fr: {
     'website.title': 'Conception Musicale et Instrumentale',
     'nav.home': 'ACCUEIL',
-    'nav.about': 'A PROPOS',
+    'about.description': 'Maxence Fulconis est un designer et ingénieur du son.',
     'nav.projects': 'PROJETS',
     'nav.sound': 'SON',
     'nav.contact': 'CONTACT',
@@ -38,7 +38,7 @@ const translations = {
   en: {
     'website.title': 'Musical and Instrumental Design',
     'nav.home': 'HOME',
-    'nav.about': 'ABOUT',
+    'about.description': 'Maxence Fulconis is a designer and sound engineer.',
     'nav.projects': 'PROJECTS',
     'nav.sound': 'SOUND',
     'nav.contact': 'CONTACT',
