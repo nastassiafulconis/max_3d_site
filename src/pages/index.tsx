@@ -1,7 +1,5 @@
 import { threeRenderer } from "@/helpers/threeRenderer";
 import { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { LanguageProvider } from "../contexts/LanguageContext";
 
 export default function Home() {
   useEffect(() => {
