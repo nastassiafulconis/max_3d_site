@@ -1,5 +1,3 @@
-"use client"
-
 import { threeRenderer } from "@/helpers/threeRenderer";
 import { useEffect } from "react";
 import { Header } from "@/components/Header";
@@ -10,11 +8,10 @@ export default function Home() {
     threeRenderer('GLTFSiteTest.glb', 'pen')
   })
     return (
-      <LanguageProvider>
-        <div className='flex flex-col w-full justify-center items-center'>
-            <Header/>
-            <div id='pen' className='h-[100vh] w-[100vh]'></div>
-        </div>
-      </LanguageProvider>
+      <div className='flex flex-col justify-center items-center min-h-screen min-w-screen'>
+        <div id='pen' 
+        className='h-screen w-screen'
+        ></div>
+      </div>
     );
 }

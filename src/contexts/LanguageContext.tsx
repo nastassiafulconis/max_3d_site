@@ -13,23 +13,19 @@ interface LanguageContextType {
 const translations = {
   fr: {
     'website.title': 'Conception Musicale et Instrumentale',
-    'nav.portfolio': 'PORTFOLIO',
-    'nav.current_projects': 'PROJETS EN COURS',
-    'portfolio.title': 'Mon Portfolio',
-    'portfolio.description': 'Découvrez mes créations musicales et instrumentales',
-    'current_projects.title': 'Projets Actuels',
-    'current_projects.description': 'Explorez mes projets en cours de développement',
-    'read.more': 'Lire la suite',
+    'nav.home': 'ACCUEIL',
+    'nav.about': 'A PROPOS',
+    'nav.projects': 'PROJETS',
+    'nav.sound': 'SON',
+    'nav.contact': 'CONTACT',
   },
   en: {
     'website.title': 'Musical and Instrumental Design',
-    'nav.portfolio': 'PORTFOLIO',
-    'nav.current_projects': 'CURRENT PROJECTS',
-    'portfolio.title': 'My Portfolio',
-    'portfolio.description': 'Discover my musical and instrumental creations',
-    'current_projects.title': 'Current Projects',
-    'current_projects.description': 'Explore my ongoing development projects',
-    'read.more': 'Read more',
+    'nav.home': 'HOME',
+    'nav.about': 'ABOUT',
+    'nav.projects': 'PROJECTS',
+    'nav.sound': 'SOUND',
+    'nav.contact': 'CONTACT',
   }
 }
 
