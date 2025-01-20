@@ -24,7 +24,7 @@ export const Project = (props: ProjectProps) => {
     return parts.map((part, index) => {
       const match = part.match(/(\S+)\s*\((https:\/\/[^)]+)\)/);
       if (match) {
-        const [_, word, url] = match;
+        const [, word, url] = match;
         return (
           <a 
             key={index}

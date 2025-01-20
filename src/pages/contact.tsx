@@ -1,6 +1,5 @@
 import { ContactForm } from "@/components/ContactForm";
 import { useLanguage } from "../contexts/LanguageContext";
-import { useState } from "react";
 
 export default function Contact() {
   const { t } = useLanguage();

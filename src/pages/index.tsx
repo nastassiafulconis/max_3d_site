@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function About() {
@@ -9,10 +10,12 @@ export default function About() {
           {t("about.description")}
         </p>
         <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden">
-          <img
+          <Image
             src="/about.jpeg"
             alt="Maxence Fulconis"
             className="w-full h-full object-cover"
+            width={384}
+            height={384}
           />
         </div>
       </div>
