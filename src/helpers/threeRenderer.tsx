@@ -3,7 +3,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { addDirectionalLight } from "./addDirectionalLight";
 
-export const threeRenderer = (file: string, elementId: string, side: "left" | "right" = "right") => {
+export const threeRenderer = (file: string, elementId: string) => {
     const scene = new THREE.Scene();
     const element = document.getElementById(elementId);
     if (!element) {
@@ -44,6 +44,15 @@ export const threeRenderer = (file: string, elementId: string, side: "left" | "r
     const intensity = 3.5;
     const softIntensity = 1;
 
-    addDirectionalLight(color, intensity, [20, 20, 0], scene);
-    addDirectionalLight(color, softIntensity, [-20, -20, 0], scene);
+    // Add ambient light for base illumination
+    const ambientLight = new THREE.AmbientLight(color, 2);
+    scene.add(ambientLight);
+
+    // Add directional lights from multiple angles to eliminate shadows
+    addDirectionalLight(color, intensity * 1.5, [20, 20, 0], scene);
+    addDirectionalLight(color, intensity, [-20, -20, 0], scene);
+    addDirectionalLight(color, softIntensity, [0, 0, 20], scene);
+    addDirectionalLight(color, softIntensity, [0, 0, -20], scene);
+    addDirectionalLight(color, softIntensity, [20, 0, 20], scene);
+    addDirectionalLight(color, softIntensity, [-20, 0, -20], scene);
 };

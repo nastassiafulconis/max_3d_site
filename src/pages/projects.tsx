@@ -3,16 +3,31 @@ import { Project } from "@/components/Project";
 import { Project as ProjectType } from "@/types";
 
 const projects: ProjectType[] = [
-  {
-    fileType: "glb",
-    fileName: "GLTFSiteTest.glb",
-    id: "pen",
-  },
-  {
-    fileType: "glb",
-    fileName: "GLTFSiteTest.glb",
-    id: "pen-2",
-  },
+    {
+        fileType: "mp4",
+        fileName: "la-chose.mp4",
+        id: "la-chose",
+    },
+    {
+        fileType: "glb",
+        fileName: "mecanisme-flexible.glb",
+        id: "mecanisme-flexible",
+    },
+    {
+        fileType: "glb",
+        fileName: "fox.glb",
+        id: "fox",
+    },
+    {
+        fileType: "glb",
+        fileName: "pen.glb",
+        id: "pen",
+    },
+    {
+        fileType: "glb",
+        fileName: "olympus.glb",
+        id: "olympus"
+    }
 ];
 
 export default function Projects() {
@@ -22,7 +37,7 @@ export default function Projects() {
       <h1 className="text-3xl font-bold mb-4">{t("nav.projects")}</h1>
       {projects.map((project, index) => {
         const side = index % 2 === 0 ? "left" : "right";
-        return <Project {...project} side={side} />;
+        return <Project key={project.id} {...project} side={side} />;
       })}
     </div>
   );
