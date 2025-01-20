@@ -7,15 +7,11 @@ const projects: ProjectType[] = [
     fileType: "glb",
     fileName: "GLTFSiteTest.glb",
     id: "pen",
-    name: "Pen",
-    description: "This is a pen and it looks pretty cool. You can play around with it! It was designed as a 3d model for a school project.",
   },
   {
     fileType: "glb",
     fileName: "GLTFSiteTest.glb",
     id: "pen-2",
-    name: "Pen",
-    description: "This is a pen and it looks pretty cool. You can play around with it! It was designed as a 3d model for a school project.",
   },
 ];
 

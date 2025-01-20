@@ -18,6 +18,10 @@ const translations = {
     'nav.projects': 'PROJETS',
     'nav.sound': 'SON',
     'nav.contact': 'CONTACT',
+    'project.pen': 'Stylo',
+    'project.pen-2': 'Stylo 2',
+    'project.pen.description': 'Ca c\'est un stylo',
+    'project.pen-2.description': 'Ca c\'est un stylo 2',
   },
   en: {
     'website.title': 'Musical and Instrumental Design',
@@ -26,6 +30,10 @@ const translations = {
     'nav.projects': 'PROJECTS',
     'nav.sound': 'SOUND',
     'nav.contact': 'CONTACT',
+    'project.pen': 'Pen',
+    'project.pen-2': 'Pen 2',
+    'project.pen.description': 'This is a pen and it looks pretty cool. You can play around with it! It was designed as a 3d model for a school project.',
+    'project.pen-2.description': 'This is a pen and it looks pretty cool. You can play around with it! It was designed as a 3d model for a school project.',
   }
 }
 
