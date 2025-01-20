@@ -3,7 +3,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { addDirectionalLight } from "./addDirectionalLight";
 
-export const threeRenderer = (file: string, elementId: string) => {
+export const threeRenderer = (file: string, elementId: string, side: "left" | "right" = "right") => {
     const scene = new THREE.Scene();
     const element = document.getElementById(elementId);
     if (!element) {
