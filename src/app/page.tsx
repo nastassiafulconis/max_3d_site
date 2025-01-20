@@ -11,7 +11,7 @@ export default function Home() {
   })
     return (
       <LanguageProvider>
-        <div className='flex flex-col justify-center align-center items-center'>
+        <div className='flex flex-col w-full justify-center items-center'>
             <Header/>
             <div id='pen' className='h-[100vh] w-[100vh]'></div>
         </div>

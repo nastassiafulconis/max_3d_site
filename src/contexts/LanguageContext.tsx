@@ -12,7 +12,7 @@ interface LanguageContextType {
 
 const translations = {
   fr: {
-    'website.title': 'Maxence Fulconis - Conception Musicale et Instrumentale',
+    'website.title': 'Conception Musicale et Instrumentale',
     'nav.portfolio': 'PORTFOLIO',
     'nav.current_projects': 'PROJETS EN COURS',
     'portfolio.title': 'Mon Portfolio',
@@ -22,7 +22,7 @@ const translations = {
     'read.more': 'Lire la suite',
   },
   en: {
-    'website.title': 'Maxence Fulconis - Musical and Instrumental Design',
+    'website.title': 'Musical and Instrumental Design',
     'nav.portfolio': 'PORTFOLIO',
     'nav.current_projects': 'CURRENT PROJECTS',
     'portfolio.title': 'My Portfolio',
