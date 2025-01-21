@@ -52,7 +52,6 @@ export const Project = (props: ProjectProps) => {
           <video 
             className="max-h-full max-w-full" 
             controls
-            autoPlay
             muted
             loop
           >
