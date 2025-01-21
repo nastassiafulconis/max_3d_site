@@ -24,7 +24,7 @@ export const Header = () => {
         <Link href="/">
           <Logo />
         </Link>
-        <h1 className="hidden md:block text-white uppercase tracking-wider p-3">
+        <h1 className="hidden md:block text-white uppercase tracking-wider p-3 text-xl">
           <b>Maxence Fulconis</b> - {t("website.title")}
         </h1>
       </div>
@@ -34,7 +34,7 @@ export const Header = () => {
           <ul className="flex space-x-6">
           {navItems.map((item) => (
               <li key={item.key}>
-                <Link href={item.href} className={`text-white hover:text-primary whitespace-nowrap ${currentPage === item.href ? 'font-bold' : ''}`}>
+                <Link href={item.href} className={`text-white hover:text-primary whitespace-nowrap text-lg ${currentPage === item.href ? 'font-bold' : ''}`}>
                   {t(item.key)}
                 </Link>
               </li>
