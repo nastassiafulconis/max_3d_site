@@ -43,7 +43,7 @@ export const Header = () => {
               <button
                 onClick={() => setLanguage("fr")}
                 className={`hover:text-primary ${
-                  language === "fr" ? "text-primary font-medium" : "text-gray-400"
+                  language === "fr" ? "text-primary font-bold" : "text-gray-400"
                 }`}
               >
                 FR
@@ -53,7 +53,7 @@ export const Header = () => {
               <button
                 onClick={() => setLanguage("en")}
                 className={`hover:text-primary ${
-                  language === "en" ? "text-primary font-medium" : "text-gray-400"
+                  language === "en" ? "text-primary font-bold" : "text-gray-400"
                 }`}
               >
                 EN
@@ -97,7 +97,7 @@ export const Header = () => {
                         setIsMenuOpen(false);
                       }}
                       className={`hover:text-primary ${
-                        language === "fr" ? "text-primary font-medium" : "text-gray-400"
+                        language === "fr" ? "font-bold" : "text-gray-400"
                       }`}
                     >
                       FR
@@ -108,7 +108,7 @@ export const Header = () => {
                         setIsMenuOpen(false);
                       }}
                       className={`hover:text-primary ${
-                        language === "en" ? "text-primary font-medium" : "text-gray-400"
+                        language === "en" ? "font-bold" : "text-gray-400"
                       }`}
                     >
                       EN
