@@ -1,7 +1,7 @@
 import { Project } from "../types";
 
 export const Sound = (props: Project) => {
-    const { fileType, fileName, id } = props;
+    const { fileName, id } = props;
 
     return (
         <div className="flex flex-col justify-center items-center p-4 w-full">
