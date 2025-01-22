@@ -19,7 +19,7 @@ export const Header = () => {
   const currentPage = usePathname();
 
   return (
-    <header className="flex justify-between items-center w-full p-4">
+    <header className="flex justify-between items-center w-full p-4 sticky top-0 z-50 bg-black">
       <div className="flex justify-start w-full align-center space-x-4">
         <Link href="/">
           <Logo />
@@ -34,7 +34,7 @@ export const Header = () => {
           <ul className="flex space-x-6">
           {navItems.map((item) => (
               <li key={item.key}>
-                <Link href={item.href} className={`text-white hover:text-primary whitespace-nowrap text-lg ${currentPage === item.href ? 'font-bold' : ''}`}>
+                <Link href={item.href} className={`text-white hover:text-primary font-bold whitespace-nowrap text-lg ${currentPage === item.href ? 'underline' : ''}`}>
                   {t(item.key)}
                 </Link>
               </li>
