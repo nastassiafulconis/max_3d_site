@@ -30,15 +30,35 @@ export const threeRenderer = (file: string, elementId: string) => {
         }
     );
 
+    let isUserInteracting = false;
+    let lastInteractionTime = 0;
+    const INTERACTION_TIMEOUT = 1000;
+    const controls = new OrbitControls(camera, canvas);
+    controls.target.set(0, 0, 0);
+    controls.update();
+
+    controls.addEventListener('start', () => {
+        isUserInteracting = true;
+        lastInteractionTime = Date.now();
+    });
+
+    controls.addEventListener('end', () => {
+        lastInteractionTime = Date.now();
+        setTimeout(() => {
+            if (Date.now() - lastInteractionTime >= INTERACTION_TIMEOUT) {
+                isUserInteracting = false;
+            }
+        }, INTERACTION_TIMEOUT);
+    });
+
     function animate() {
+        if (!isUserInteracting) {
+            scene.rotation.y += 0.01;
+        }
         renderer.render(scene, camera);
     }
 
     renderer.setAnimationLoop(animate);
-
-    const controls = new OrbitControls(camera, canvas);
-    controls.target.set(0, 0, 0);
-    controls.update();
 
     const color = "#fff";
     const intensity = 3.5;
