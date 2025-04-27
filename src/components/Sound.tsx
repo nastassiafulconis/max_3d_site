@@ -1,7 +1,7 @@
-import { Project } from "../types";
+import { ProjectItem } from "../types";
 
-export const Sound = (props: Project) => {
-    const { fileName, id } = props;
+export const Sound = (props: ProjectItem) => {
+    const { id, signedUrl } = props;
 
     return (
         <div className="flex flex-col justify-center p-4 w-[95%]">
@@ -19,7 +19,7 @@ export const Sound = (props: Project) => {
                     [&::-webkit-media-controls-timeline-container]:text-black
                     [&::-webkit-media-controls-volume-slider-container]:text-black
                 "
-                src={`/${fileName}`}
+                src={signedUrl}
                 controls
             />
         </div>

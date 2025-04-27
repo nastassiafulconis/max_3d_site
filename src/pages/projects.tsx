@@ -1,36 +1,19 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { Project } from "@/components/Project";
-import { Project as ProjectType } from "@/types";
-
-const projects: ProjectType[] = [
-    {
-        fileType: "mp4",
-        fileName: "la-chose.mp4",
-        id: "la-chose",
-    },
-    {
-        fileType: "glb",
-        fileName: "mecanisme-flexible.glb",
-        id: "mecanisme-flexible",
-    },
-    {
-        fileType: "glb",
-        fileName: "fox.glb",
-        id: "fox",
-    },
-    {
-        fileType: "glb",
-        fileName: "pen.glb",
-        id: "pen",
-    },
-    {
-        fileType: "glb",
-        fileName: "olympus.glb",
-        id: "olympus"
-    }
-];
+import { ProjectItem } from "@/types";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Projects() {
+  const [projects, setProjects] = useState<ProjectItem[]>([]);
+
+  useEffect(() => {
+    fetch('/api/projects?type=project')
+      .then((res) => res.json())
+      .then((data: ProjectItem[]) => setProjects(data))
+      .catch(console.error);
+  }, []);
+
   const { t } = useLanguage();
   return (
     <div className="flex flex-col items-center justify-center">

@@ -1,30 +1,19 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { Sound } from "../components/Sound";
-
-const sounds = [
-    {
-        id: "Dunes",
-        fileName: "Dunes.wav",
-        fileType: "wav",
-    },
-    {
-        id: "Flute chords",
-        fileName: "Flute chords.mp3",
-        fileType: "mp3",
-    },
-    {
-        id: "Nils Frahmesque",
-        fileName: "Nils Frahmesque.mp3",
-        fileType: "mp3",
-    },
-    {
-        id: "Creation bactérienne",
-        fileName: "creation_bacterienne.mp3",
-        fileType: "mp3",
-    },
-]
+import { useState } from "react";
+import { useEffect } from "react";
+import { ProjectItem } from "@/types";
 
 export default function SoundPage() {
+  const [sounds, setSounds] = useState<ProjectItem[]>([]);
+
+  useEffect(() => {
+    fetch('/api/projects?type=sound')
+      .then((res) => res.json())
+      .then((data: ProjectItem[]) => setSounds(data))
+      .catch(console.error);
+  }, []);
+
   const { t } = useLanguage();
   return (
     <div className="flex flex-col items-center justify-center w-screen">
