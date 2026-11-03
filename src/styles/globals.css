@@ -64,3 +64,10 @@ audio::-webkit-media-controls * {
   color: black !important;
   -webkit-text-fill-color: black !important;
 }
+
+/* Dark text on light buttons (overrides the forced white text above) */
+button.text-black,
+input[type="file"]::file-selector-button {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}

@@ -6,12 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "hash-password": "node scripts/hash-password.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.797.0",
     "@aws-sdk/client-s3": "^3.797.0",
     "@aws-sdk/lib-dynamodb": "^3.797.0",
+    "@aws-sdk/s3-presigned-post": "~3.797.0",
     "@aws-sdk/s3-request-presigner": "^3.797.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",

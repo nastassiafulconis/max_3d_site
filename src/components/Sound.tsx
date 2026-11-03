@@ -1,11 +1,14 @@
 import { ProjectItem } from "../types";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Sound = (props: ProjectItem) => {
-    const { id, signedUrl } = props;
+    const { id, signedUrl, name_en, name_fr } = props;
+    const { language } = useLanguage();
+    const title = (language === "en" ? name_en || name_fr : name_fr || name_en) || id;
 
     return (
         <div className="flex flex-col justify-center p-4 w-[95%]">
-            <h1 className="text-xl ml-6">{id}</h1>
+            <h1 className="text-xl ml-6">{title}</h1>
             <audio
                 className="
                     w-full
